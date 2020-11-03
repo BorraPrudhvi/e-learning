@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Document</title>
+</head>
+
+<style>
+    body {margin:0;}
+        .grid-container {display: grid;
+        grid-template-areas:
+        'h1  h1  h1  h1  h1  h1'
+        'h2  h2  h2  h2  h2  h2'
+        'h3  h3  h3  h3  h3  h3'
+        'h4  h4  h4  h5  h5  h5'
+        'h6  h6  h7  h7  h8  h8';}
+        .grid-container>div
+        { 
+        padding:20px;
+        font-size:20px;
+        margin: 0%;
+        margin-top: 0%;}
+        .item1{grid-area:h1;background-color:lightgrey;}
+        .item2{grid-area:h2;text-align:center;}
+        .item3{grid-area:h3;background-color:teal;text-align:center;}
+        .item4{grid-area:h4;background-color:teal;text-align:center;}
+        .item5{grid-area:h5;background-color:teal;text-align:center;}
+        .item6{grid-area:h6;background-color:#222222;text-align:center;}
+        .item7{grid-area:h7;background-color:#222222;text-align:center;}
+        .item8{grid-area:h8;background-color:#222222;text-align:center;}
+
+        </style>
+
+<body>
+
+        <div class="grid-container">
+        <div class="item1" style="padding: 10px"> 
+
+                <p id="clk"></p>
+                <style>
+                    p
+                    {
+                      position: fixed;
+                      color: black;
+                      margin: 0px 100px 0px 0px;
+                    }
+                </style>
+                <script>
+                    setInterval(getdateandtime,1000);
+                    function getdateandtime()
+                    {
+                      var date=new Date()
+                      document.getElementById("clk").innerHTML=date
+                    }
+                </script><br><br>
+
+                <div class="dropdown">
+                        <b><a href="#" class="dropbtn"style="border-radius: 12px">EXPLORE</a></b>
+                 <div class="dropdown-content">   
+               <div class="row">
+             <div class="column">
+                 <h1 style="font-size: 20px;">CSE</h1>
+               <a id="myBtn"style="border-radius: 12px">C</a>
+               <a id="myBtn"style="border-radius: 12px">C++</a>
+               <a id="myBtn"style="border-radius: 12px">JAVA</a>
+               <a href="#"style="border-radius: 12px">PYTHON</a>
+             </div>
+             <div class="column">
+               <h1 style="font-size: 20px;">ECE</h1>
+               <a href="#"style="border-radius: 12px">Basic Electrical Technology</a>
+               <a href="#"style="border-radius: 12px">Advanced Control Systems</a>
+               <a href="#"style="border-radius: 12px">Circuits and Electronics</a>
+               <a href="#"style="border-radius: 12px">Advanced Electric Drives</a>
+             </div>
+             <div class="column">
+                 <h1 style="font-size: 20px;">MEC</h1>
+               <a href="#"style="border-radius: 12px">Basic Thermodynamics</a>
+               <a href="#"style="border-radius: 12px">Computational Fluid Dynamics</a>
+               <a href="#"style="border-radius: 12px">Advanced Machining Processes</a>
+               <a href="#"style="border-radius: 12px">Advanced Strength of Materials</a>
+             </div>
+           </div>
+         </div>
+       </div>
+
+
+       <style>
+            *{
+                box-sizing: border-box;
+            }
+            .dropdown 
+            {
+                float: left;
+            }
+            .dropdown .dropbtn 
+            {
+                color: firebrick;
+                padding: 12px 14px;
+                font-size: 25px;
+                background-color: inherit;
+            }
+            .dropdown:hover .dropbtn
+            {
+                background-color: #808080 ;
+            }
+            .dropdown-content 
+            {
+                display: none;
+                position: absolute;
+                width: 75%;
+            }
+            .dropdown:hover .dropdown-content 
+            {
+                display: block;
+            }
+            .column 
+            {
+                float: left;
+                width: 33.33%;
+                background-color: #2F4F4F;
+                height: 270px;
+            }
+            .column a 
+            {
+                color: black;
+                padding: 16px;
+                display: block;
+                text-align: left;
+            }
+            .column a:hover 
+            {
+                background-color: #696969;
+            }
+        </style>
+
+
+       <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p><b><center>Create an account to go through our courses.<br>(OR)<br>
+                  Signin to your account if you have an account already.</center></b></p><br>
+                  <h1><center><b><u>Signin Options</b></u></center></h1>
+                 <center><form onsubmit ="return fun()">
+                      E-mail :&emsp;&emsp;<input type="text" id="E-mail"placeholder="@ email" required/><br><br>
+                      Password:&emsp;<input type="password" id="Password"placeholder="Password" required/><br><br>
+                      <button class="button" onclick="return fun()" style="background: lightcoral" >LOGIN</button><br>
+                      <a href="#" class="fa fa-facebook"></a>Login with facebook<br>
+                      <a href="#" class="fa fa-google"></a>Login with Google
+                      <style>
+                          .fa {                                
+                            width: 40px;
+                            text-align: center;
+                            margin: 5px 2px;
+                            border-radius: 50%;
+                          }
+                          .fa-facebook 
+                          {
+                            background: #3B5998;
+                            color: white;
+                          }
+                          .fa-google 
+                          {
+                            background: #dd4b39;
+                            color: white;
+                          }
+                          </style>
+
+
+                    <style>
+                            .modal 
+                            {
+                            display: none;
+                            position: fixed; 
+                            z-index: 1; 
+                            padding-top: 100px;
+                            left: 0;
+                            top: 0;
+                            width: 100%; 
+                            height: 100%;
+                            overflow: auto;
+                            background-color: rgb(0,0,0);
+                            background-color: rgba(0,0,0,0.4); 
+                            }
+                            .modal-content 
+                            {
+                            background-image: url("images/pop_bckgrnd2.jpg");
+                            background-repeat: no-repeat;
+                            background-blend-mode:soft-light;
+                            background-size: 100%;
+                            background-color: #8FBC8F;
+                            margin: auto;
+                            padding: 20px;
+                            border: 2px solid 	black;
+                            width: 700px;
+                            height: 450px;
+                            }
+                            .close 
+                            {
+                            color: #8B0000;
+                            float: right;
+                            font-size: 28px;
+                            font-weight: bold;
+                            }
+                            
+                            .close:hover,
+                            .close:focus 
+                            {
+                            color: #000;
+                            text-decoration: none;
+                            cursor: pointer;
+                            }
+                            </style>
+                    
+                    
+                    </form></center>
+
+
+                    <script>
+                            var modal = document.getElementById("myModal");
+                            var btn = document.getElementById("myBtn");
+                            var span = document.getElementsByClassName("close")[0]; 
+                            btn.onclick = function() {
+                              modal.style.display = "block";
+                            }
+                            span.onclick = function() {
+                              modal.style.display = "none";
+                            }
+                            window.onclick = function(event) {
+                              if (event.target == modal) {
+                                modal.style.display = "block";
+                              }
+                            }
+                        </script>
+      
+                  <script>
+                      function fun()
+                      {
+                      var x =document.getElementById("E-mail").value;
+                      var c =document.getElementById("Password").value;
+                       var atpos = x.indexOf("@");
+                          var dotpos = x.lastIndexOf(".");
+                      if(x==0)
+                      {
+                      alert("Please enter your email id");
+                      return false;
+                      }
+                      if(c==0)
+                      {
+                        alert("Please enter your password");
+                        return false;
+                      }
+                       if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+                       {
+                              alert("Not a valid e-mail address");
+                              return false;
+                      }
+                      }
+                      </script>
+                </div>
+        </div>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/Courses_Home_Page.html"><button class="btn">
+            <i class="fa fa-home"></i> Home</button></a>
+        <button class="btn" style="padding: 5px"><i ></i> Login</button>
+        <button class="btn" style="padding: 5px;"><i ></i> Signup</button>
+        
+
+
+        <style>
+                btn
+                {
+                  background-color: none;
+                  border: 10px;
+                  color: white;
+                  padding: 12px 16px;
+                  font-size: 16px;
+                  cursor: pointer;
+                }
+                
+                /* Darker background on mouse-over */
+                .btn:hover 
+                {
+                  background-color: RoyalBlue;
+                }
+                </style>
+
+        </div>
+        <div class="item2" style="padding: 50px;color: white">
+
+                <h1 style="padding: 80px">ONLINE COURSES</h1>
+
+                <style>
+                        .item2
+                        {
+                            background-image: url("images/Most.Popular.Online.Courses.2018.jpg");
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            
+                        }
+                    </style>
+
+        </div>
+        <div class="item3">
+
+                <marquee direction="right"><img src="images/giphy.gif"></marquee>
+
+        </div>
+        <div class="item4">
+
+                <img src="images/ittagirl.gif" style="height: 250px";width: 250px;>
+
+        </div>
+        <div class="item5">
+
+                <img src="images/image2.gif" style="height: 250px";width: 250px;>
+
+        </div>
+        <div class="item6" style="color: white">
+
+                <h4><font size="+2"><b><u>Products</u></b></font></h4><br>
+                Certificates<br>
+                 Catalog<br>
+                 Master Track<br>
+                 Degrees<br>
+
+        </div>
+        <div class="item7" style="color: white">
+
+                <h4><font size="+2"><b><u>Community</b></u></font></h4><br>
+                Learners<br>
+                Developers<br>
+                Beta Testers<br>
+                Translators<br>
+
+        </div>
+        <div class="item8" style="color: white">
+
+                <h4><font size="+2"><b><u>Corsetty</u></b></font></h4><br>
+                About<br>
+                Careers<br>
+                Partners<br>
+                Help <br>
+
+        </div>
+        </div>
+    
+</body>
+</html>

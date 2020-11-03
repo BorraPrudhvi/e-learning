@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Signup</title>
+</head>
+
+    <style>
+        body
+        {
+            margin: 0%;
+        }
+        .grid-container {display: grid;
+        grid-template-areas:
+        'h1  h1  h1  h1  h1  h1';}
+
+        .grid-container>div
+        { 
+        padding:inherit;
+        font-size:20px;
+        margin: 0%;
+        margin-top: 0%;}
+        .item1{grid-area:h1;text-align: center;}
+
+        </style>
+
+<body>
+    <div class="grid-container">
+    <div class="item1">
+            <button class="redirect">
+                <a class="back" href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/Opening_page.html#demo">Redirect</a></button>
+        <style>
+            .back
+            {
+                font-size: 18px;
+                padding: inherit;
+                color: wheat;	
+                text-decoration: none;
+            }
+            .redirect
+            {
+                padding: 5px;
+                width: 100px;
+                cursor: pointer;    
+                height: 50px;
+                background-color: inherit;
+                text-decoration: none;
+                margin-top: 2%;
+                margin-left: 2%;
+                float: left;
+            }
+            .redirect:hover
+            {
+                box-shadow: 5px 5px 5px 5px rgba(14, 3, 3, 0.897);
+            }
+        </style>
+
+        <br><br>
+        <h1><b><u>NEW USER..? CREATE YOUR ACCOUNT HERE..!!</b></u></h1><br>
+        <p><b>If you are new user , then create a new account by clickng on "SIGNUP" buttom<br> and fill in your details.
+            If you are already a member of our website ,<br> then "LOGIN" to your account with your user id and password.</b>
+        </p>
+        <br>
+        <style>
+            h1
+            {
+                margin-top: 6%;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 45px;
+            }
+            p{
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+        </style>
+            
+            <ul>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;background-color: inherit;border: none;">    
+                <li><a href="#" class="round red">Sign Up<span class="round">That is, if you want to become a member</span></a></li></button>
+
+
+                <div id="id01" class="modal">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <form class="modal-content" action="/action_page.php">
+                          <div class="container">
+                            <h1 style="margin-top: 15px"><b><u>Sign Up</u></b></h1>
+                            <p style="margin: 15px">Please fill in this form to create an account.</p>
+                            <hr>
+                            First name :<br><input type="text" id=" First name"placeholder="First Name"class="form-control"><br>
+                            Last name :<br><input type="text" id="Last name"placeholder="Last Name"class="form-control"><br>
+                            E-mail :<br><input type="text" id="E-mail"placeholder="@ email"class="form-control"><br>
+                            Phone :<br><input type="text" id="Phone"placeholder="Moblile Number"  class="form-control" maxlength="10"><br>
+                            Password:<br><input type="password" id="Password"placeholder="Password"class="form-control"><br>
+                            Conform Password:<br><input type="password" id="conform_password"placeholder="Conform Password"align="right"class="form-control"><br>
+                            Gender:<br><input type="radio"name="feedback"value="Male">Male
+                            <input type="radio"name="feedback"value="Female">Female
+                            <input type="radio"name="feedback"value="Others">Others<br>
+                            
+                            <label>
+                                    <style>
+                                            input,#Password,#conform_password{
+                                              border: none;
+                                              border-bottom: 1px solid black;
+                                              background: transparent;
+                                              outline: none;
+                                            }
+                                        </style>
+                              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                            </label>
+                      
+                            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                      
+                            <div class="clearfix">
+                              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                              <button type="submit" onclick="return fun()" class="signupbtn"><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/Courses_Home_Page.html">SignUp</a></button>
+                            </div>
+                          </div>
+                        </form>
+                        <script>
+                            function fun()
+                            {
+                            var c=Number(document.getElementById("Last name").value);
+                            var e=Number(document.getElementById("Password").value);
+                            var b=document.getElementById("Phone").value;
+                            var x =document.getElementById("E-mail").value;
+                            var a=document.getElementById("Password").value;
+                            var d=document.getElementById("conform_password").value;
+                                var atpos = x.indexOf("@");
+                                var dotpos = x.lastIndexOf(".");
+                            if(c==0)
+                            {
+                            alert("fill in the details");
+                            return false;
+                            }
+                            if(e==0)
+                            {
+                            alert("Please set a password");
+                            return false;
+                            }
+                             if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+                             {
+                                    alert("Not a valid e-mail address");
+                                    return false;
+                            }
+                            if(isNaN(b)||b.length!=10)
+                            {
+                            alert("Enter valid mobile number");
+                            return false;
+                            }
+                            if(a!=d)
+                            {
+                            alert("passwords should match")
+                            return false;
+                            }
+                            alert("registered successfully");
+                            }
+                            </script>
+                            
+                      </div>
+                      
+                      <script>
+                      var modal = document.getElementById('id01');
+                      window.onclick = function(event) {
+                        if (event.target == modal) {
+                          modal.style.display = "none";
+                        }
+                      }
+                      </script>
+
+
+                    <style>
+                        input{
+                            color: white;
+                        }
+
+                        input[type=email], input[type=password] {
+                        width: 80%;
+                        padding: 20px;
+                        margin: 5px 0 22px 0;
+                        display: inline-block;
+                        border: none;
+                        background: #f1f1f1;
+                        }
+                        input[type=email]:focus, input[type=password]:focus {
+                        background-color: #ddd;
+                        }
+                        .signupbtn {
+                        background-color: rgb(47, 177, 47);
+                        color: white;
+                        padding: 14px 20px;
+                        margin: 8px 0;
+                        border: 3px;
+                        border-color: #ddd;
+                        cursor: pointer;
+                        }
+                        
+                        .signupbtn:hover {
+                        opacity:1;
+                        }
+                        .cancelbtn {
+                        padding: 14px 20px;
+                        background-color: #f44336;
+                        }
+                        .cancelbtn, .signupbtn {
+                        float: center;
+                        width: 30%;
+                        margin: 2%;
+                        }
+                        .modal {
+                        display: none;
+                        position: fixed;
+                        z-index: 1;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: auto;
+                        background-image: url("images/computer-science-engineering.png");
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        padding:0px;
+                        }
+                        .modal-content {
+                            text-align: left;
+                        background-color: inherit;
+                        color: #fff;
+                        margin: 5% auto 0% auto;
+                        border: 4px solid #888;
+                        width: 70%;
+                        }
+                        hr {
+                        border: 1px solid #f1f1f1;
+                        margin-bottom: 25px;
+                        }
+                        .close {
+                        position: absolute;
+                        right: 35px;
+                        top: 15px;
+                        font-size: 40px;
+                        font-weight: bold;
+                        color: red;
+                        }
+                        .close:hover,
+                        .close:focus {
+                        color: #f44336;
+                        cursor: pointer;
+                        }
+                        .clearfix::after {
+                        content: "";
+                        clear: both;
+                        display: table;
+                        }
+                        
+                </style>
+
+
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <li><a href="#" class="round green">Login<span class="round">That is, if you already have an account.</span></a></li>
+                  </ul> 
+    
+        <style>
+    * {
+        margin: 0;
+          -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        ul {
+            margin: 30px auto;
+            text-align: center;
+        }
+        li {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        .round {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding-top: 30px;		
+            text-decoration: none;		
+            text-align: center;
+            font-size: 25px;		
+            text-shadow: 0 1px 0 rgba(255,255,255,.7);	
+            -webkit-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            -moz-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+            box-shadow: 2px 2px 7px rgba(0,0,0,.2);
+            border-radius: 300px;
+            border-width: 5px;
+            border-style: solid;
+        }
+    
+        .round:hover {
+            width: 130%;
+            height: 130%;
+            left: -15%;
+            top: -15%;
+            font-size: 33px;
+            padding-top: 38px;
+            -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+            -o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+            -moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+            box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+            -webkit-transform: rotate(-360deg);
+            -moz-transform: rotate(-360deg);
+            -o-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+        }
+    
+        a.red {
+            background-color: rgba(239,57,50,1);
+            color: black;
+            border-color: rgba(133,32,28,.2);
+        }
+    
+        a.red:hover {
+            color: rgba(239,57,50,1);
+        }
+    
+        a.green {
+            background-color: rgba(1,151,171,1);
+            color: black;
+            border-color: rgba(0,63,71,.2);
+        }
+        a.green:hover {
+            color: rgba(1,151,171,1);
+        }
+        .round span.round {
+            display: block;
+            opacity: 0;
+            -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+            font-size: 1px;
+            border: none;
+            padding: 40% 20% 0 20%;
+            color: #fff;
+        }
+        .round span:hover {
+            opacity: .85;
+            font-size: 16px;
+            -webkit-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+            -moz-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+            -o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+            text-shadow: 0 1px 1px rgba(0,0,0,.5);	
+        }
+        .green span {
+            background: rgba(0,63,71,.7);		
+        }
+    
+        .red span {
+            background: rgba(133,32,28,.7);		
+        }
+    
+        </style>
+
+        <style>
+            .item1
+            {
+                background-image: url("images/pexels-photo.jpeg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                height: 667px;
+            }
+        </style>
+
+
+        
+    </div>
+</div>
+
+</body>
+</html>

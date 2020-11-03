@@ -1,0 +1,57 @@
+
+<html>
+<head>
+	<h1>CONTACT US</h1>
+
+</head>
+<style>
+	body
+	{
+		background-color:skyblue;
+	}
+</style>
+
+
+
+
+<title>sign up</title>
+<script>
+function validateform(){
+	var x=document.forms["myform"]["YourName"].value;
+
+
+var b=document.forms["myform"]["ContactNo"].value;
+if(b.length!=10){
+	alert("number should not be less than 10");
+	return false;
+}
+var f=document.forms["myform"]["Email"].value;
+		 if(f=="")
+		 {
+		 	alert("Please fill the Email field");
+		 	return false;
+		 }
+		 if(f.value.indexOf("@",0) <0)
+		 {
+		 	alert("please fill correct details");
+		 	return false;
+		 }
+		 if(f.value.indexOf(".",0) <0)
+		 {
+		 	alert("please fill correct details");
+		 	return false;
+		 }
+		 alert("")
+		}
+</script>
+</head>
+<body>
+	<form name="myform" onsubmit="validateform()">
+	Your Name:<br><input type="text" name="Your Name" required="true"><br><br>
+	Email:<br><input type="Email" name="Email" required="true"><br><br>
+Comment:<br><br>
+<textarea name="message" form="myform">Enter text here...</textarea>
+<input type="button" onclick="alert('submitted')" value="submit">
+</form>
+</body>
+</html>

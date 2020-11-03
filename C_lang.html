@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>C_language</title>
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+</head>
+<body>
+    <style>
+        body
+        {
+            margin: 0px;
+            background-image: url("images/bg_c5.jpg");
+            background-attachment: fixed;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .grid-container {display: grid;
+        grid-template-areas:
+        'h2  h1  h1  h1  h1  h1'
+        'h2  h3  h3  h3  h3  h3'
+        'h4  h4  h4  h4  h4  h4'
+        'h5  h5  h5  h5  h5  h5'
+        'h6  h6  h7  h7  h8  h8'
+        'h9  h9  h9  h9  h9  h9';}
+        .grid-container>div
+        {
+        padding: 20px;
+        margin: 0%;}
+        .item1{grid-area:h1;background-color: inherit;text-align: center;color:darkgoldenrod;}
+        .item2{grid-area:h2;background-color:inherit;width: 240px;}
+        .item3{grid-area:h3;background-color:inherit;color: wheat;}
+        .item4{grid-area:h4;background-color:inherit;text-align: center;}
+        .item5{grid-area:h5;background-color:inherit; text-align: center;}
+        .item6{grid-area:h6;background-color:inherit;text-align: center;color: wheat;}
+        .item7{grid-area:h7;background-color:inherit;text-align: center;color: wheat;}
+        .item8{grid-area:h8;background-color:inherit;text-align: center;color: wheat;}
+        .item9{grid-area:h9;background-color:inherit;text-align: center;color: wheat;}
+    </style>
+
+    <div class="grid-container">
+    <div class="item1">
+        <u><h1>Learn C Programming</h1>
+        <p>The Definitive Guide</p></u>
+        <style>
+            h1
+            {
+                font-size: 55px;
+            }
+            p
+            {
+                font-size: 25px;
+            }
+        </style>
+    </div>
+    <div class="item2">
+
+        <button class="redirect">
+            <a class="back" href="courses.html">Redirect</a></button>
+    <style>
+        .back
+        {
+            font-size: 18px;
+            padding: inherit;
+            color: wheat;	
+            text-decoration: none;
+        }
+        .redirect
+        {
+            padding: 5px;
+            width: 100px;
+            cursor: pointer;    
+            height: 50px;
+            background-color: inherit;
+            text-decoration: none;
+            margin-top: 2%;
+            margin-left: 2%;
+            margin-bottom: 10%;
+            float: left;
+        }
+        .redirect:hover
+        {
+            box-shadow: 5px 5px 5px 5px rgba(14, 3, 3, 0.897);
+        }
+    </style>
+
+
+            <img src="images/wwwpromoter_b.gif" style="width: 200px;height: 600px;"><br><br>
+            <img src="images/nest-50.gif" style="width: 200px;height: 600px;"><br><br>
+            <img src="images/central-adelaide-diamond-offer.gif" style="width: 200px;height: 600px;"><br><br>
+            <img src="images/bol.gif" style="width: 200px;height: 600px;"><br><br>
+            <img src="images/supid.gif" style="width: 200px;height: 600px;"><br><br>
+            <img src="images/images (7).jpg" style="width: 200px;height: 600px;"><br><br>
+            <img src="images/images (8).jpg" style="width: 200px;height: 600px;"><br><br>
+            <img src="images/images (9).jpg" style="width: 200px;height: 600px;"><br><br>
+            
+
+    </div>
+    <div class="item3">
+        <p>C is a powerful general-purpose programming language. It is fast, portable and available in all platforms.<br><br>
+            If you are new to programming, C is a good choice to start your programming journey.<br><br>
+            This is a comprehensive guide on how to get started in C programming language, why you should learn it and how you can learn it.</p><br>
+            <u><h1 style="font-size: 40px;text-align: center;">What is C Programming? - The Basics</h1></u><br>
+            <p>Before getting started with C programming, lets get familiarized with the language first.<br><br>
+                C is a general-purpose programming language used for wide range of applications from
+                 Operating systems like Windows and iOS to software that is used for creating 3D movies.<br><br>
+                 C programming is highly efficient. That’s the main reason why it’s very popular despite being more than 40 years old.<br><br>
+                 Standard C programs are portable. The source code written in one system works in another operating system without any change.<br><br>
+                 As mentioned, it’s a good language to start learning programming. If you know C programming, you will not just understand 
+                 how your program works, but will also be able to create a mental picture on how a computer works.<br><br></p>
+                 <u><h1 style="font-size: 40px;text-align: center;">The fun begins: Your first C program</h1></u><br>
+                 <h2>Why “Hello, World!” program?</h2>
+                 <p>“Hello, World!” is a simple program that displays “Hello, World!” on the screen. Since,
+                      it’s a very simple program, it is used to illustrate the basic syntax of any programming language.<br><br>
+                      This program is often used to introduce programming language to a beginner. So, let’s get started.<br><br>
+                      #include <stdio.h><br>
+                            int main()<br>
+                            {<br>
+                                printf("Hello, World!\n");<br>
+                                return 0;<br>
+                            }<br><br></p>
+                <h2>How “Hello, World!” program works?</h2>
+                <h2>Include stdio.h header file in your program</h2>
+                <p>C programming is small and cannot do much by itself. You need to use libraries that are necessary to run the program.
+                 The stdio.h is a header file and C compiler knows the location of that file. To use the file, you need to include it in
+                  your program using #include preprocessor.</p>
+                <h2>Why do you need stdio.h file in this program?</h2>
+                <p>In this program, we have used printf() function which displays the text inside the quotation mark. Since printf() 
+                    is defined in stdio.h, you need to include stdio.h.</p>
+                <h2>The main() function</h2>
+                <p>In C programming, the code execution begins from the start of main() function (doesn’t matter if main() isn’t located at the beginning).<br>
+                        The code inside the curly braces { } is the body of main() function. The main() function is mandatory in every C program.<br><br>
+                        int main() <br>
+                        {<br><br>
+                        }<br>
+                    </p>
+                <h2>The printf() function</h2>
+                <p>The printf() is a library function that sends formatted output to the screen (displays the string inside the quotation mark). Notice the semicolon at the end of the statement.<br>
+                        In our program, it displays Hello, World! on the screen.<br>
+                        Remember, you need to include stdio.h file in your program for this to work.</p><br><br>
+                <h1 style="text-align: center;font-size: 40px;"><u>C Tutorials</u></h1>
+                <h2>INTRODUCTION</h2><br>
+                  <div id="accord">
+                <h5>Keywords & Identifier</h5>
+                    <div id="accord_content">
+                       <p>Keywords are predefined, reserved words used in programming that have special meanings to the<br> compiler.
+                          Keywords are part of the syntax and they cannot be used as an identifier.<br> For example:</p>
+                        <h2>C Keywords</h2>
+
+                        <table id="t01">
+                            <tr>
+                              <th>auto</th>
+                              <th>doouble</th> 
+                              <th>int</th>
+                              <th>struct</th>
+                            </tr>
+                            <tr>
+                              <td>break</td>
+                              <td>else</td>
+                              <td>long</td>
+                              <td>switch</td>
+                            </tr>
+                            <tr>
+                              <td>case</td>
+                              <td>enum</td>
+                              <td>register</td>
+                              <td>typedef</td>
+                            </tr>
+                            <tr>
+                              <td>char</td>
+                              <td>extern</td>
+                              <td>return</td>
+                              <td>union</td>
+                            </tr>
+                            <tr>
+                                <td>continue</td>
+                                <td>for</td>
+                                <td>signed</td>
+                                <td>void</td>
+                            </tr>
+                            <tr>
+                                <td>do</td>
+                                <td>if</td>
+                                <td>static</td>
+                                <td>while</td>
+                            </tr>
+                            <tr>
+                                <td>default</td>
+                                <td>goto</td>
+                                <td>sizeof</td>
+                                <td>volatile</td>
+                            </tr>
+                            <tr>
+                                <td>const</td>
+                                <td>float</td>
+                                <td>short</td>
+                                <td>unsigned</td>
+                            </tr>
+                          </table>
+
+                          <style>
+                              #t01{
+                                width:80%;
+                              }
+                              #t01, th, td {
+                                border: 1px solid #eee;
+                                border-collapse: collapse;
+                              }
+                              th, td {
+                                padding: 15px;
+                                text-align: left;
+                              }
+                              #t01 tr:nth-child(even) {
+                                background-color: #eee;
+                                color:black;
+                              }
+                              #t01 tr:nth-child(odd) {
+                               background-color: #fff;
+                               color: black;
+                              }
+                              #t01 th {
+                                background-color: #fff;
+                                color: black;
+                              }
+                              </style>
+                    </div>
+
+                    <h5>Variables & Constants</h5>
+                    <div id="accord_content">
+                        <p>In programming, a variable is a container (storage area) to hold data.<br>
+                            To indicate the storage area, each variable should be given a unique name (identifier).
+                             Variable<br> names are just the symbolic representation of a memory location.<br>
+                              For example:<br><br>
+                              int number = 5;      // integer variable<br>
+                              number = 5.5;        // error<br>
+                              double number;       // error<br><br>
+                              Here, the type of number variable is int. You cannot assign a floating-point (decimal)
+                               value 5.5<br> to this variable. Also, you cannot redefine the data type of the variable to double.
+                                By the way, <br>to store the decimal values in C, you need to declare its type to either double or float.</p>
+                     </div>
+                     
+                    <h5>C Data Types</h5>
+                        <div id="accord_content">
+                            <h2>Basic Types</h2>
+                            <p>Here's a table containing commonly used types in C programming for quick access.<br></p>
+
+                            <table id="t02">
+                                <tr>
+                                  <th>Type</th>
+                                  <th>	Size (bytes)</th> 
+                                  <th>Format Specifier</th>
+                                </tr>
+                                <tr>
+                                  <td>int</td>
+                                  <td>at least 2, usually 4</td>
+                                  <td>%d</td>
+                                </tr>
+                                <tr>
+                                  <td>char</td>
+                                  <td>1</td>
+                                  <td>%c</td>
+                                </tr>
+                                <tr>
+                                  <td>float</td>
+                                  <td>4</td>
+                                  <td>%f</td>
+                                </tr>
+                              </tr>
+                                <tr>
+                                  <td>double</td>
+                                  <td>8</td>
+                                  <td>%lf</td>
+                                </tr>
+                              </tr>
+                              <tr>
+                                <td>Short int</td>
+                                <td>2 usually</td>
+                                <td>%hd</td>
+                              </tr>
+                              </tr>
+                              <tr>
+                                <td>Unsigned int</td>
+                                <td>at least 2, usually 4</td>
+                                <td>%u</td>
+                              </tr>
+                              <tr>
+                                  <td>Long int</td>
+                                  <td>at least 4, usually 8</td>
+                                  <td>%li</td>
+                                </tr>
+                                <tr>
+                                    <td>Long long int</td>
+                                    <td>at least 8</td>
+                                    <td>%lli</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Signed char</td>
+                                      <td>1</td>
+                                      <td>%c</td>
+                                    </tr>
+                              </table>
+
+                              <style>
+                              #t02 {
+                                width:80%;
+                              }
+                              #t02, th, td {
+                                border: 1px solid black;
+                                border-collapse: collapse;
+                              }
+                              th, td {
+                                padding: 15px;
+                                text-align: left;
+                              }
+                              #t02 tr:nth-child(even) {
+                                background-color: #eee;
+                                color: black;
+                              }
+                              #t02 tr:nth-child(odd) {
+                               background-color: #fff;
+                               color: black;
+                              }
+                              #t02 th {
+                                background-color: black;
+                                color: white;
+                              }
+                              </style>
+
+                         </div>
+                      
+                    <h5>C Input/Output</h5>
+                        <div id="accord_content">
+                            <h2>C INPUT</h2>
+                            <p>In this tutorial, you will learn to use scanf() function to take input from the user, and printf()<br>
+                               function to display output to the user.</p>
+                            <h2>C OUTPUT</h2>
+                            <p>In C programming, printf() is one of the main output function. The function sends formatted <br>output to 
+                              the screen.<br> For example :<br><br>
+                              #include < stdio.h > <br>  
+                                  int main()<br>
+                                  { <br>
+                                      // Displays the string inside quotations<br>
+                                      printf("C Programming");<br>
+                                      return 0;<br>
+                                  }</p>
+                         </div>
+                      
+                    <h5>C Operators</h5>
+                        <div id="accord_content">
+                            <h2>C Arithematic Operators</h2>
+                            <table id="t02">
+                                <tr>
+                                  <th>Operator</th>
+                                  <th>Meaning of Operator</th> 
+                                </tr>
+                                <tr>
+                                  <td>+</td>
+                                  <td>addition or unary plus</td>
+                                </tr>
+                                <tr>
+                                  <td>-</td>
+                                  <td>subtraction or unary minus</td>
+                                </tr>
+                                <tr>
+                                  <td>*</td>
+                                  <td>multiplication</td>
+                                </tr>
+                                <tr>
+                                    <td>/</td>
+                                    <td>division</td>
+                                  </tr>
+                                  <tr>
+                                      <td>%</td>
+                                      <td>remainder after division (modulo division)</td>
+                                    </tr>
+                              </table>
+
+                              <h2>Assignment Operators</h2>
+                              <table id="t02">
+                                  <tr>
+                                    <th>Operator</th>
+                                    <th>Example</th> 
+                                    <th>Same as</th>
+                                  </tr>
+                                  <tr>
+                                    <td>=</td>
+                                    <td>a = b</td>
+                                    <td>a = b</td>
+                                  </tr>
+                                  <tr>
+                                    <td>+=</td>
+                                    <td>a += b</td>
+                                    <td>a = a + b</td>
+                                  </tr>
+                                  <tr>
+                                      <td>-=</td>
+                                      <td>a -= b</td>
+                                      <td>a = a - b</td>
+                                    </tr>
+                                  <tr>
+                                    <td>*=</td>
+                                    <td>a *= b</td>
+                                    <td>a = a * b</td>
+                                  </tr>
+                                  <tr>
+                                      <td>/=</td>
+                                      <td>a /= b</td>
+                                      <td>a = a / b</td>
+                                  </tr>
+                                  <tr>
+                                      <td>%=</td>
+                                      <td>a %= b</td>
+                                      <td>a = a % b</td>
+                                  </tr>
+                                  
+                                </table>
+
+                         </div>
+                        </div>
+                         <script src="jquery-3.4.1.js"></script>
+                         <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+                         <script>
+                          $("#accord").accordion({icons:
+                                {
+                                    header:"ui-icon-folder-collapsed",
+                                    activeHeader:"ui-icon-folder-open"
+                                },active:null,collapsible:true,heightstyle:"content"
+                                });
+                          </script>
+                        
+                    <h2>FLOW CONTROL</h2>
+                    <div id="accord1">
+                    <h5>if...else Statement</h5 >
+                        <div id="accord_content">
+                            <h2>C if Statement</h2>
+                            <p>The syntax of the if statement in C programming is:<br><br>
+                              if (test expression) <br>
+                              {<br>
+                                 // statements to be executed if the test expression is true<br>
+                              }<br></p>
+                              <h2>C if...else Statement</h2>
+                              <p>The if statement may have an optional else block. The syntax of the if..else statement is:<br><br>
+                                if (test expression) {<br>
+                                  // statements to be executed if the test expression is true<br>
+                              }<br>
+                              else {<br>
+                                  // statements to be executed if the test expression is false<br>
+                              }</p>
+                         </div>
+                         
+                     <h5>C for Loop</h5>
+                        <div id="accord_content">
+                            <h2>for Loop</h2>
+                            <p>The syntax of the for loop is:<br><br>
+                              for (initializationStatement; testExpression; updateStatement)<br>
+                              {<br>
+                                  // statements inside the body of loop<br>
+                              }<br></p>
+                              <h2>for loop flowchart</h2>
+                              <img src="images/c-for-loop.jpg">
+                         </div>
+                        
+                     <h5>C while Loop</h5>
+                        <div id="accord_content">
+                            <h2>while Loop</h2>
+                            <p>The syntax of the while loop is:<br><br>
+                              while (testExpression) <br>
+                              {<br>
+                                  // statements inside the body of the loop <br>
+                              }<br></p>
+                              <h2>while loop flowchart</h2>
+                              <img src="images/c-while-loop_0.jpg">
+                         </div>
+                         
+                     <h5>Break & Continue</h5>
+                        <div id="accord_content">
+                            <h2>C break</h2>
+                            <p>The break statement ends the loop immediately when it is encountered. Its syntax is:<br><br>
+                              break;<br></p>
+                              <h2>How break statement works...?</h2>
+                              <img src="images/c-break-statement-works.jpg"><br>
+                              <h2>C continue</h2>
+                              <p>The continue statement skips the current iteration of the loop and continues with the next iteration.<br>
+                                 Its syntax is :<br><br>
+                                 continue;<br></p>
+                                 <h2>How continue statement works...?</h2>
+                                 <img src="images/c-continue-statement-works.jpg"><br>
+                         </div>
+                        
+                        <h5>Switch Statement</h5>
+                        <div id="accord_content">
+                            <h2>C switch Statement</h2>
+                            <p>The switch statement allows us to execute one code block among many alternatives.<br></p>
+                            <h2>switch Statement Flowchart</h2>
+                            <img src="images/flowchart-switch-statement.jpg">
+                         </div>
+                    </div>
+                         <script>
+                          $("#accord1").accordion({icons:
+                                {
+                                    header:"ui-icon-folder-collapsed",
+                                    activeHeader:"ui-icon-folder-open"
+                                },active:null,collapsible:true,heightstyle:"content"
+                                });
+                          </script>
+                         
+                        <h2>FUNCTIONS</h2>
+                        <div id="accord2">
+                        <h5>Functions Introduction</h5>
+                            <div>
+                                <h2>C Functions</h2>
+                                <p>A function is a block of code that performs a specific task.<br>
+
+                                    Suppose, you need to create a program to create a circle and color it. You can create two<br>
+                                    functions to solve this problem:<br><br>
+                                    
+                                    1. create a circle function<br>
+                                    2. create a color function<br><br>
+                                    Dividing a complex problem into smaller chunks makes our program easy to understand to reuse.<br></p>
+                                    <img src="images/function-c-programming.jpg">
+                             </div>
+                             
+                         <h5>User-defined Function</h5>
+                            <div>
+                                <h2>C User-defined functions</h2>
+                                <p>A function is a block of code that performs a specific task.<br>
+
+                                    C allows you to define functions according to your need. These functions are known as<br>
+                                     user-defined functions. For example:    <br>    
+                                    Suppose, you need to create a circle and color it depending upon the radius and color.<br>
+                                     You can create two functions to solve this problem:<br><br>
+                                    
+                                    1. createCircle() function<br>
+                                    2. color() function<br><br></p>
+                                    <img src="images/pass-arguments-c-programming.jpg">
+                             </div>
+                             
+                         <h5>Function Types</h5>
+                            <div>
+                                <h2>Types of User-defined Functions in C Programming</h2>
+                                <p>These 4 programs below check whether the integer entered by the user is a prime number or not.<br><br>
+
+                                    The output of all these programs below is the same, and we have created a user-defined function<br>
+                                     in each example. However, the approach we have taken in each example is different.<br><br>
+                                    1. No arguments passed and no return value<br>
+                                    2. No arguments passed but a return value<br>
+                                    3. Argument passed but no return value<br>
+                                    4. Argument passed and a return value<br></p>
+                             </div>
+                             
+                         <h5>Recursion inC</h5>
+                            <div>
+                                <h2>C Recursion</h2>
+                                <P>A function that calls itself is known as a recursive function. And, this technique is known as recursion.<br><br></P>
+                                <img src="images/how-recursion-works-c_0.jpg">
+                             </div>
+                            
+                         <h5>Variable Scope</h5>
+                            <div>
+                                <h2>C Storage Class</h2>
+                                <p>Every variable in C programming has two properties: type and storage class.<br><br>
+
+                                    Type refers to the data type of a variable. And, storage class determines the scope, visibility<br>
+                                     and lifetime of a variable.<br>
+                                    
+                                    There are 4 types of storage class:<br><br>
+                                    
+                                    1. automatic<br>
+                                    2. external<br>
+                                    3. static<br>
+                                    4. register<br></p>
+                                    <h2>Local Variable</h2>
+                                    <p>The variables declared inside a block are automatic or local variables. The local variables exist<br>
+                                       only inside the block in which it is declared.<br></p>
+                                      <h2>Global Variable</h2>
+                                      <p>Variables that are declared outside of all functions are known as external or global variables.<br>
+                                         They are accessible from any function inside the program.<br></p>
+                             </div>
+                        </div>
+                        <script>
+                          $("#accord2").accordion({icons:
+                                {
+                                    header:"ui-icon-folder-collapsed",
+                                    activeHeader:"ui-icon-folder-open"
+                                },active:null,collapsible:true,heightstyle:"content"
+                                });
+                          </script>
+                        <h2>ARRAYS</h2><br>
+                        <div id="accord3">
+                        <h5>C Array Introduction</h5>
+                            <div>
+                                <h2>C Arrays</h2>
+                                <img src="images/c-arrays.jpg"><br>
+                                <h2>How to initialize an array..?</h2><br>
+                                <img src="images/c-array-initialization.jpg">
+                             </div>
+                             
+                        <h5>Multidimensional Array</h5>
+                            <div>
+                                <h2>C Multidimensional Arrays</h2>
+                                <p>In C programming, you can create an array of arrays. These arrays are known as multidimensional arrays.<br>
+                                   For example :<br><br>
+                                   float x[3][4];<br><br>
+                                   Here, x is a two-dimensional (2d) array. The array can hold 12 elements. You can think the array<br>
+                                    as a table with 3 rows and each row has 4 columns.<br></p>
+                                    <img src="images/two-dimensional-array_0.jpg">
+                             </div>
+                            
+                        <h5>Arrays & Functions</h5>
+                            <div>
+                                <h2>Pass arrays to a function in C</h2>
+                                <p>In C programming, you can pass en entire array to functions. Before we learn that,<br>
+                                   let's see how you can pass individual elements of an array to functions.<br><br>
+                                   // Program to calculate the sum of array elements by passing to a function <br>
+                                   #include <stdio.h><br>
+                                   float calculateSum(float age[]);<br>
+                                   int main() {<br>
+                                       float result, age[] = {23.4, 55, 22.6, 3, 40.5, 18};<br>
+                                       // age array is passed to calculateSum()<br>
+                                       result = calculateSum(age); <br>
+                                       printf("Result = %.2f", result);<br>
+                                       return 0;<br>
+                                   }<br>
+                                   float calculateSum(float age[]) {<br>
+                                     float sum = 0.0;<br>
+                                     for (int i = 0; i < 6; ++i) {<br>
+                                       sum += age[i];<br>
+                                     }<br>
+                                     return sum;<br>
+                                   }<br></p>
+                             </div>
+                             
+                        <h5>String in C</h5>
+                            <div>
+                                <h2>C Programming Strings</h2>
+                                <p>In C programming, a string is a sequence of characters terminated with a null character \0.<br>
+                                   For example :<br><br>
+                                   char c[] = "c string";<br><br>
+                                   When the compiler encounters a sequence of characters enclosed in the double quotation marks,<br>
+                                   \ it appends a null character \0 at the end by default.<br><br></p>
+                                   <img src="images/c-string.jpg">
+                             </div>
+                             
+                        <h5>String Function</h5>
+                            <div>
+                                <h2>String Manipulations In C Programming Using Library Functions</h2>
+                                <p>You need to often manipulate strings according to the need of a problem.<br>
+                                   Most, if not all, of the time string manipulation can be done manually but, <br>
+                                   this makes programming complex and large.<br><br>
+                                   To solve this, C supports a large number of string handling functions in the standard library "string.h".<br>
+                                   Few commonly used string handling functions are discussed below:<br><br></p>
+
+                                   <table id="t02">
+                                      <tr>
+                                        <th>Function</th>
+                                        <th>Work of Function</th>
+                                      </tr>
+                                      <tr>
+                                        <td>strlen()</td>
+                                        <td>computes string's length</td>
+                                      </tr>
+                                      <tr>
+                                        <td>strcpy()</td>
+                                        <td>copies a string to another</td>
+                                      </tr>
+                                      <tr>
+                                        <td>strcat()</td>
+                                        <td>concatenates(joins) two strings</td>
+                                      </tr>
+                                      <tr>
+                                          <td>strcmp()</td>
+                                          <td>compares two strings</td>
+                                        </tr>
+                                        <tr>
+                                            <td>strlwr()</td>
+                                            <td>converts string to lowercase</td>
+                                          </tr>
+                                          <tr>
+                                              <td>strupr()</td>
+                                              <td>converts string to uppercase</td>
+                                            </tr>
+                                    </table>
+                             </div>
+                        </div>
+                        <script>
+                          $("#accord3").accordion({icons:
+                                {
+                                    header:"ui-icon-folder-collapsed",
+                                    activeHeader:"ui-icon-folder-open"
+                                },active:null,collapsible:true,heightstyle:"content"
+                                });
+                          </script>
+                    
+                    
+                    <h1 style="font-size: 40px;text-align: center;"><u>Teach Yourself to Code in C</u></h1><br>
+                    <h2>Learn C from Programiz</h2>
+                    <p>Programiz offers dozens of tutorials and examples to help you learn C programming from scratch.<br><br>
+
+                            The tutorials are designed for beginners who do not have any prior knowledge of C <br>
+                            programming (or, any other programming languages). Each tutorial is written in depth with<br>
+                             examples and detailed explanation.</p>
+                    <h2>Recommended Books in C Programming</h2>
+                    <p>If you are serious about learning programming (any programming language including C),<br>
+                         you should get yourself a good book. <br><br>
+
+                            Granted, reading a 600 page long programming book takes a lot of time and patience. But, <br>
+                            you will get the big picture of programming concepts in the book which you may not find elsewhere.<br><br>
+                            
+                            Here are 3 books we personally recommend.</p>
+                <div class="book1">
+                    <img src="images/C-book.jpg" style="height: 250px;margin-top: 2%">
+                    <h2>The C Programming Language (2nd Edition)</h2>
+                    <p>This book provides the complete guide to ANSI standard C language.</p>
+                    <style>
+                        .book1
+                        {
+                            background: inherit;
+                            padding: 0 20px 20px;
+                            margin: 20px;
+                            box-shadow: 0px 0px 10px #5f6c7e;
+                        }
+                    </style>
+                </div>
+                <div class="book2">
+                    <img src="images/c-boook2.jpg" style="height: 250px;margin-top: 2%">
+                    <h2>C Programming: A Modern Approach (2nd Edition)</h2>
+                    <p>Personally I believe, this is the best book for beginners</p>
+                    <style>
+                            .book2
+                            {
+                                background: inherit;
+                                padding: 0 20px 20px;
+                                margin: 20px;
+                                box-shadow: 0px 0px 10px #5f6c7e;
+                            }
+                    </style>
+                </div>
+                <div class="book3">
+                    <img src="images/C-book3.jpg" style="height: 250px;margin-top: 2%">
+                    <h2>C Pocket Reference (1st Edition)</h2>
+                    <p>Don’t want to search pages and pages to look for a small information? Get this book.</p>
+                    <style>
+                            .book3
+                            {
+                                background: inherit;
+                                padding: 0 20px 20px;
+                                margin: 20px;
+                                box-shadow: 0px 0px 10px #5f6c7e;
+                            }
+                    </style>
+                </div>
+        <style>
+            p
+            {
+                font-size: 20px;
+            }
+        </style>
+
+    </div>
+    <div class="item4">
+
+            
+    </div>
+    <div class="item5">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div class="row">
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-user" style="font-size: 50px"></i></p>
+                <h3>11+</h3>
+                <p>Partners</p>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-check" style="font-size: 50px"></i></p>
+                <h3>55+</h3>
+                <p>Projects</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-smile-o" style="font-size: 50px"></i></p>
+                <h3>100+</h3>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-coffee" style="font-size: 50px"></i></p>
+                <h3>100+</h3>
+                <p>Meetings</p>
+              </div>
+            </div>
+          </div>
+
+          <style>
+              
+              .column {
+                float: left;
+                width: 24%;
+                padding: 0 5px;
+              }
+              .row {margin-right: 10px;margin-left: 25px;}
+              .row:after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+              @media screen and (max-width: 600px) {
+                .column {
+                  width: 100%;
+                  display: block;
+                  margin-bottom: 10px;
+                }
+              }
+              .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                padding: 16px;
+                text-align: center;
+                background-color: #444;
+                color: white;
+              }
+              .card:hover
+              {
+                box-shadow: 20px 20px 20px 20px rgba(14, 3, 3, 0.897);
+              }
+              </style>
+
+    </div>
+    <div class="item6">
+            <h4><font size="+2"><b><u>Products</u></b></font></h4><br>
+            Certificates<br><br>
+             Catalog<br><br>
+             Master Track<br><br>
+             Degrees<br><br>
+    </div>
+    <div class="item7">
+            <h4><font size="+2"><b><u>Community</b></u></font></h4><br>
+            Learners<br><br>
+            Developers<br><br>
+            Beta Testers<br><br>
+            Translators<br><br>
+    </div>
+    <div class="item8">
+            <h4><font size="+2"><b><u>Corsetty</u></b></font></h4><br>
+            About<br><br>
+            Careers<br><br>
+            Partners<br><br>
+            Help <br><br>
+    </div>
+    <div class="item9">
+            copyrights &copy; 2019 | Corsetty all rights recieved 2019.
+    </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment Sheet </title>
+	<link rel="stylesheet" type="text/css" href="payment.css">
+</head>
+<body >
+<div class="payment">
+	<form>
+		<h1>Payment</h1>
+		<br>
+		Card Type:
+		<select name="cardtype" class="custom-select" >
+			<option value="credit">Credit Card</option>
+			<option value="debit">Debit Card</option>
+		</select><br>
+		<br>
+		Card Number:
+		<input type="text" id="txt1" style="color:aliceblue"  name="cardnumber" placeholder="Enter Card Number" maxlength="16"  required><br>
+		Card Holder Name:
+		<input type="text" id="txt2"   style="color:aliceblue" name="cardholder" placeholder="Enter Card Holder Name" minlength="8" required><br>
+		CVV:
+		<input type="text"  id="txt3"  style="color:aliceblue" name="cvv" placeholder="Enter CVV" maxlength="3" minlength="3" required>
+		Exp Date:
+		<input type="text"  id="txt4" style="color:aliceblue" name="exp" placeholder="06/2023" maxlength="7" minlength="7" required><br>
+		Pin:
+		<input type="password"  id="txt5" style="color:aliceblue" name="pin" placeholder="Enter Pin Number" maxlength="4" minlength="4" required><br>
+		<a href="courses.html">
+		<input type="button"  value="Pay" name="OK" onclick=" return validate()"></a>
+	<a href="Opening_page.html">	<input type="reset" name="Reset"> </a>
+		<img src="images/Payment-Background-PNG.jpg"style height="40px" width="320px">
+</form>
+</div>
+
+<script>
+	function validate()
+	{
+	var a=Number(document.getElementById("txt4").value);
+	var d=Number(document.getElementById("txt5").value);
+	var c=Number(document.getElementById("txt2").value);
+	var e=Number(document.getElementById("txt3").value);
+	var b=document.getElementById("txt1").value;
+	if(c==0)
+	{
+	alert("Enter a valid name");
+	return false;
+	}
+	if(b==0||isNaN(b)||b.length!=16)
+	{
+	alert("Enter valid card number");
+	return false;
+	}
+	if(e==0||isNaN(e))
+	{
+	alert("Enter valid cvv");
+	return false;
+	}
+	if(a==0)
+	{
+	alert("Enter a date");
+	return false;
+	}
+	if(d==0||isNaN(d))
+	{
+	alert("Enter valid pin");
+	return false;
+	}
+	alert("Payment successfully");
+	}
+	</script>
+</body>
+</html>

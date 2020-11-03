@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feedback</title>
+</head>
+
+        <style>
+ input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+}
+input[type=email] {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+}
+
+
+
+input[type=submit] {
+    align-content: center;
+    background-color: orange;
+    color: black solid;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 45%;
+    bottom: 1.3%;
+}
+
+input[type=submit]:hover {
+    transition-duration: 0.8s;
+    background-color: goldenrod;
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.container {
+    border: black solid 2px;
+    border-radius: 5px;
+    background-color: gray;
+    padding: 40px;
+}
+        </style>
+    
+<body>
+<div class="container">
+  <form action="index.html" onsubmit="fun()">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+    <label for="gmail">Gmail</label>
+    <input type="email" id="gmail" name="email" placeholder="@gmail" required>
+
+    <label for="country">Country</label>
+    <select id="country" name="country"required>
+
+        <option value="India">India</option>
+        <option value="wakanda">Wakanda</option>
+        <option value="antarctica">Antarctica</option>
+        <option value="vatican city">Vatican city</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write your Feedback here...." style="height:200px"required></textarea>
+
+    <a href="home.html">
+    <input type="submit" value="Submit" name="Submit">
+    </a>
+    <script type="text/javascript">
+    function fun() {
+        alert("Thank you for your feedback");
+    }
+</script>
+
+  </form>
+</div>
+</body>
+</html>

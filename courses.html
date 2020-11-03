@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<html>
+
+<style>
+
+@font-face {
+    font-family: login;
+    src: url(fonts/Painting_With_Chocolate.ttf);
+}
+@font-face {
+    font-family: menu;
+    src: url(fonts/jamie.ttf);
+}
+
+ html {
+  min-height: 100%;
+background-size: auto;
+     
+     background-image: url(images/open-book-library-education-read-159621.jpeg);
+     background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}    
+
+
+
+body {
+  height: 100%;
+
+}
+
+#but1
+{
+    position: fixed;
+}
+
+ #but1:hover{
+ transition-delay: 0.8;
+ background-color: cornflowerblue;
+ box-shadow: 3px 3px 3px 3px black;
+ 
+ transition-duration: 0.8s;
+
+
+}
+
+.text {
+	font-family: menu;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+	color: antiquewhite;
+    font-size: 74px;
+	
+	}
+	.text1 {
+	font-family : login;
+    position: absolute;
+    top : 8px;
+    right: 16px;
+	color:azure; 
+    font-size: 30px;
+    background-color: transparent;
+    cursor: pointer;
+     border-radius: 10px;
+    }
+    .text3 {
+	font-family : login;
+    position: absolute;
+    top : 8px;
+    right: 150px;
+	color:azure; 
+    font-size: 30px;
+    background-color: transparent;
+    cursor: pointer;
+     border-radius: 10px;
+	}
+    .text2 {
+      position: absolute;
+      top: 10px;
+      left: 580px;
+    }
+    #img1{
+        position: absolute;;
+        top: 50px;
+        left:550px;
+        height: 200px;
+        width: 320px;
+       
+    }
+    #img2{
+        position: absolute;;
+        bottom: 50px;
+        right:10px;
+        height: 200px;
+        width: 100px;
+    
+    }
+    #img3{
+        position: absolute;;
+        bottom: 100px;
+        right:10px;
+        height: 300px;
+        width: 150px;
+    
+    }
+    .courses {
+  
+  width: 20%;
+  padding: 6px;
+  }
+
+.list1 {
+  list-style-type: armenian;;
+  border:black 2px solid;
+  background-color: gray;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.list1 .header {
+    font-family : login;
+  background-color: gray;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  border-bottom-color: black;
+ 
+  padding: 20px;
+  
+}
+
+.list1 li {
+    font-family : menu;
+  background-color:burlywood;
+  border-bottom: 3px solid black;
+  padding: 10px;
+  text-align: center;
+ font-size: 40px;
+}
+.list1 li:hover{
+    background-color: grey ;
+
+    box-shadow: 5px 5px 5px 0px black;
+    cursor: pointer;
+    transition-duration: 0.8s;
+}
+ a{
+     text-decoration: none;
+    font-family : menu;
+  background-color:burlywood;
+  border-bottom: 3px solid black;
+  padding: 10px;
+  text-align: center;
+ font-size: 40px;
+ color: black;
+}
+a:hover{
+    background-color: grey ;
+
+   
+    cursor: pointer;
+  
+}
+
+
+h1 {
+  font-size: 62px;
+  background: -webkit-linear-gradient(cornsilk,black,cornsilk);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.f1{
+    background-color:#222222;
+    text-align:center;}
+        .f2{
+            background-color:#222222;text-align:center;}
+        .f3{
+            background-color:#222222;
+            text-align:center;
+        }
+        .f4{
+            background-color:#222222;
+            text-align:center;}
+
+    </style>
+    <link rel="stylesheet" type="txt/css" href="jquery-ui-1.12.1\jquery-ui.structure.css">
+    <link rel="stylesheet" type="txt/css" href="jquery-ui-1.12.1\jquery-ui.theme.css">
+</head>
+<body >
+
+        
+   
+  <centre>  <div class="text2" STYLE = " align-content: center; font-family:login ; font-display: optional; font-size: 62px; color: cornsilk; "><h1>COURSES</h1></div> </centre>
+ <div> <img src="images/ggggg.gif" id="img1" > </div>
+
+  <div>
+        <a href = "file:///D:/project/SEM-5/Web_Development/Online_courses_portal/Opening_page.html" class="text1"><input class="text1" id="but1" type="submit" value="Logout" ></a>
+    </div> 
+    <div>
+        <a href = "file:///D:/project/SEM-5/Web_Development/Online_courses_portal/Courses_Home_Page.html" class="text3"><input class="text3" id="but1" type="submit" value="Home" ></a>
+    </div>
+    <div>
+        <img src="images/bol.gif" style="position:absolute; bottom: 10px; right: 10px; top: 380px;">
+        </div>
+        
+         
+        <p id="clk"><b></b></p>
+        <style>
+            p
+            {
+              position: absolute ;
+              color: black;
+              margin: 0px 100px 0px 0px;
+              font-family:login;
+            }
+        </style>
+        <script>
+            setInterval(getdateandtime,1000);
+            function getdateandtime()
+            {
+              var date=new Date()
+              document.getElementById("clk").innerHTML=date
+            }
+        </script><br>
+<div class="courses">
+        <ul class="list1">
+          <li class="header" onclick="fun()">CSE</li>
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/C_lang.html">C</a></li> 
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/C_lang.html">C++</a></li> 
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/C_lang.html">JAVA</a></li> 
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/C_lang.html">PYTHON</a></li> 
+         
+        </ul>
+      </div>
+      
+      <div class="courses">
+        <ul class="list1">
+          <li class="header"onclick="fun()">ECE</li>
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/C_lang.html">DIGITAL ELECTRONICS</a></li> 
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/C_lang.html">RFID TECHNOLOGY</a></li> 
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/C_lang.html">SOLAR TECHNOLOGY</a></li> 
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/C_lang.html">SENSOR TECHNOLOGY</a></li> 
+        </ul>
+      </div>
+      
+      <div class="courses">
+        <ul class="list1">
+          <li class="header"onclick="fun()">MEC</li>
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/mec.html">LIQUID MECHANICS</a></li> 
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/mec.html">SOLID MECHANICS</a></li> 
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/mec.html">DYNAMICS</a></li> 
+          <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/mec.html">STATICS</a></li> 
+         
+         
+        </ul>
+      </div>
+      <div>
+         
+          </div>
+      
+<script src="jquery-ui-1.12.1\jquery-ui.js"></script>
+   
+
+<script src="jquery-3.4.1.js"></script>
+<script>
+    function fun()
+    {
+        alert("Choose the Topics below");
+    }
+    </script>
+    <div class="f1" style="color: lightgray">
+            <h3><font size="+2"><b><u>PRODUCTS</u></b></font></h3><br>
+            Certificates<br>
+             Catalog<br>
+             Master Track<br>
+             Degrees<br>
+    </div>
+    <div class="f2"style="color: lightgray">
+            <h3><font size="+2"><b><u>COMMUNITY</b></u></font></h3><br>
+            Learners<br>
+            Developers<br>
+            Beta Testers<br>
+            Translators<br>
+    </div>
+    <div class="f3"style="color: lightgray">
+            <h3><font size="+2"><b><u>CORSETTY</u></b></font></h3><br>
+            About<br>
+            Careers<br>
+            Partners<br>
+            Help <br>
+    </div>
+    <div class="f4" style="color:silver;padding: 5px">
+
+      copyrights &copy; 2019 | Corsetty all rights recieved 2019.
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div1">
+       <p> This is first div</p>
+       <p> This is NOT it ....</p>
+    </div>
+    <div id="2nd" class="div2">
+        <p>This is second div</p>
+        <ul>
+            <li>Sandwich</li>
+            <li>Burger</li>
+            <li>Pizza</li>
+        </ul>
+    </div>
+    <div class="div3">
+        <button>Click me to see the effect</button>
+    </div>
+    <style>
+        div{
+            border: 2px solid;
+            margin: 10px;
+            width: 33.33%;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+        $(".div1").slideToggle(2000)
+        $("#2nd").fadeTo(800,0.7)
+        $("#2nd").removeClass("div2")
+         })
+        })
+    </script>
+</body>
+</html>

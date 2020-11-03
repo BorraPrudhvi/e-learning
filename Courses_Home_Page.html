@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home_page</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<button class="open-button" onclick="openForm()">Live Chat</button>
+    
+    <div class="chat-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1 style="font-size: 27px">Clear your queries..!!</h1>
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message..." name="msg" required></textarea>
+        <a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/Courses_Home_Page.html">
+          <button type="button" class="btn" onclick="sendForm()">Send</button></a>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+  
+    <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    function sendForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+<style>
+    .open-button {
+      background-color:orangered;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 80px;
+      width: 200px;
+    }
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 15px;
+      border: 2px solid orangered;
+      z-index: 9;
+    }
+    .form-container {
+      max-width: 280px;
+      padding: 10px;
+      background-color:darkslategrey;
+    }
+    .form-container textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      resize: none;
+      min-height: 200px;
+    }
+    .form-container textarea:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    .form-container .btn {
+      background-color:#67b26b;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      
+    }
+    .form-container .cancel {
+      background-color:#dd4b39;
+    }
+    .form-container .btn:hover, .open-button:hover {
+      color: white;
+      box-shadow:5px 5px 5px 5px #222222;
+    }
+    </style>
+
+<body>
+<div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+</div>
+
+<style>
+    body {margin:0;}
+    .icon-bar 
+    {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .icon-bar a 
+    {
+        display: block;
+        padding: 14px;
+        transition: all 0.5s ease;
+        font-size: 20px;
+    }
+    .icon-bar a:hover 
+    {
+        background-color: #000;
+    }
+    .facebook 
+    {
+        background: #3B5998;
+        color: white;
+    }
+    .twitter 
+    {
+        background: #55ACEE;
+        color: white;
+    }
+    .google 
+    {
+        background: #dd4b39;
+        color: white;
+    }
+    .linkedin 
+    {
+        background: #007bb5;
+        color: white;
+    }
+
+    .content 
+    {
+        margin-left: 75px;
+        font-size: 30px;
+    }
+</style>
+
+        <style>
+        .grid-container {display: grid;
+        grid-template-areas:
+        'h1  h1  h1  h1  h1  h1'
+        'h2  h2  h2  h2  h2  h2'
+        'h3  h3  h4  h4  h5  h5'
+        'h6  h6  h6  h6  h6  h6'
+        'h7  h7  h7  h7  h7  h7'
+        'h8  h8  h8  h9  h9  h9'
+        'h10  h10  h10  h10  h10  h10'
+        'h11  h11  h12  h12  h13  h13'
+        'h14  h14  h14  h14  h14  h14';}
+        .grid-container>div
+        { 
+        padding:20px;
+        font-size:20px;
+        margin: 0%;
+        margin-top: 0%;}
+        .item1{grid-area:h1;background-color: black;text-align: right}
+        .item2{grid-area:h2;}
+        .item3{grid-area:h3;background-color:white;text-align:center;}
+        .item4{grid-area:h4;background-color:white;text-align:center;}
+        .item5{grid-area:h5;background-color:white;text-align:center;}
+        .item6{grid-area:h6;background-color:white;text-align:center;}
+        .item7{grid-area:h7;background-color:teal;text-align:center;}
+        .item8{grid-area:h8;background-color:teal;text-align:center;}
+        .item9{grid-area:h9;background-color:teal;text-align:center;}
+        .item10{grid-area:h10;background-color:wheat;text-align:center;}
+        .item11{grid-area:h11;background-color:#222222;text-align:center;}
+        .item12{grid-area:h12;background-color:#222222;text-align:center;}
+        .item13{grid-area:h13;background-color:#222222;text-align:center;}
+        .item14{grid-area:h14;background-color:#222222;text-align:center;}
+
+        </style>
+
+<body>
+
+    <div class="grid-container">
+    <div class="item1" style="padding: inherit;">
+      <ul>
+        <li style="float: left;"><img src="images/giphy (1).gif" style="height: 50px;"></li>
+        <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/Opening_page.html#demo" >Logout</a></li>
+        <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/html_contact.html">About&Contact</a></li>
+        <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/feedback.html">Feedback</a></li>
+        <li><a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/subscription.html">Subscription</a></li>
+        <li><a class="active1" href="#">Home</a></li> 
+      </ul>
+
+      <style>
+        ul {
+          list-style-type: none;
+          padding: 0;
+          overflow:inherit;
+        }
+        
+        li {
+          float: right;
+        }
+        
+        li:last-child {
+          border-right: none;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          color: white;
+          text-decoration: none;
+          transition: all 0.6s;
+          border-radius: 20%;
+          background-color:teal;
+        }
+        
+        .active1 {
+          border-radius: 20%;
+          background-color: teal;
+        }
+        </style>
+
+
+    </div>
+    <div class="item2" style="padding: 120px;color: white">
+           <h1 style="font-size: 50px"><b>World-class learning for<br>anyone,anywhere</b></h1><br>
+           <p1>Everything from courses to engineering-flexible,<br>affordable, 100% online</p1><br><br><br>
+           <a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/subscription.html">
+            <button class="button" style="vertical-align:middle" ><span>Join now</span></button></a>&emsp;&emsp;
+            <img src="images/giphy2.gif" style="height: 150px">
+           <style>
+                .button {
+                  border-radius: 50px;
+                  background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+                  border: none;
+                  color: #FFFFFF;
+                  text-align: center;
+                  font-size: 28px;
+                  padding: 20px;
+                  width: 200px;
+                  transition: all 0.5s;
+                  cursor: pointer;
+                  margin: 5px;
+                }
+                
+                .button span {
+                  cursor: pointer;
+                  display: inline-block;
+                  transition: 0.5s;
+                }
+                
+                .button span:after {
+                  content: '\00bb';
+                  opacity: 0;
+                  top: 0;
+                  right: -20px;
+                  transition: 0.5s;
+                }
+                
+                .button:hover span {
+                  padding-right: 25px;
+                }
+                
+                .button:hover span:after {
+                  opacity: 1;
+                  right: 0;
+                }
+                </style>
+
+         <style>
+             .item2
+             {
+                 background-image: url("images/bg2.jpg");
+                 background-repeat: no-repeat;
+                 background-size: 100%;
+                 
+             }
+         </style>         
+    </div>
+    <div class="item3">
+        <img src="images/online-training_Institute.gif" style="height: 300px;width: 300px;"><br>
+        <b><i><u>COMPUTER SCIENCE<br>& ENGINEERING</b></i></u><br>
+        <p>Join us to learn C,C++,Python,<br>Java,Oracke and other<br> computer languages</p>
+        <a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/subscription.html">
+        <button class="button" style="vertical-align:middle;background: linear-gradient(to right, #df1c1c, #e7a61a) !important;" >
+          <span>Join now</span></button></a>
+
+    </div>
+    <div class="item4">
+        <img src="images/networking-1024x594.png"style="height: 300px;width: 300px;"><br>
+        <b><i><u>ELECTRICAL<br>ENGINEERING</b></i></u><br>
+        <p>Join us to learn Basic electrical theory,<br>Advanced control systems,<br>Circuits and Electronics etc..</p>
+        <a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/subscription.html">
+        <button class="button" style="vertical-align:middle;background: linear-gradient(to right, #df1c1c, #e7a61a) !important;" >
+          <span>Join now</span></button></a>
+    </div>
+    <div class="item5">
+        <img src="images/2c953fea30caddc111a8f098cb47d041.gif"style="height: 300px;width: 300px;"><br>
+        <b><i><u>MECHANICAL<br>ENGINEERING</b></i></u> <br>
+        <p>Join us to learn Basic Thermodynamics,<br>Computational fluid dynamics,<br>Advanced mechine processing etc..</p>
+        <a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/subscription.html">
+        <button class="button" style="vertical-align:middle;background: linear-gradient(to right, #df1c1c, #e7a61a) !important;" >
+          <span>Join now</span></button></a>
+    </div>
+    <div class="item6">
+
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/computer-science-engineering.png" alt="Los Angeles" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 style="font-size: 40px">Computer-Science and Engineeering</h3>
+                  <p>C , C++ , Python , Java etc...</p>
+                </div>   
+              </div>
+              <div class="carousel-item">
+                <img src="images/images (5).jpg" alt="Chicago" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 style="font-size: 40px">Electrical Engineering</h3>
+                  <p>Circuits and Electronics</p>
+                </div>   
+              </div>
+              <div class="carousel-item">
+                <img src="images/images (6).jpg" alt="New York" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 style="font-size: 40px;color: black">Mechanical Engineering</h3>
+                  <p style="color: black">Thermodynamics and Fluid Mechanics</p>
+                </div>   
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+
+          <style>
+              /* Make the image fully responsive */
+              .carousel-inner img {
+                width: 95%;
+                height: 500px;
+                
+                    }
+              </style>
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    </div>
+    <div class="item7" style="padding: 30px">
+        <h2 style="font-size: 40px"><b><i><u>Learn The Way You Learn The Best</u></i></b></h2>
+        <p>You learn best when you get to apply what you learn quickly. That’s why we’ve<br>
+           developed Courses that combine short expert videos with immediate hands-on-<br>
+           the-keyboard exercises. Why we have built Practice Mode with instant and <br>
+           personalised feedback on every exercise. And why we have developed <br>
+           <u>"Corsetty"</u> Projects based on real-world problems.</p><br>
+           <a href="file:///D:/project/SEM-5/Web_Development/Online_courses_portal/subscription.html">
+           <button class="button" style="vertical-align:middle;width: 300px;background: linear-gradient(to right, #05dd0f, #0c0902) !important;" >
+            <span>Subscribe now</span></button></a><br><br>
+        
+        <marquee style="color: white;font-size: 30px;">Subscribe with a plan to Learn,Practice and Build.</marquee>
+
+    </div>
+    <div class="item8">
+        <img src="images/giphy3.gif">
+
+        <p style="font-size: 25px"><b>Feel the live experience</b></p>
+
+    </div>
+    <div class="item9">
+        <img src="images/Client_advising1.png">
+        <p style="font-size: 25px"><b>Mutual interaction with over faculties.</b></p>
+
+    </div>
+    <div class="item10">
+
+        <div class="row">
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-user" style="font-size: 50px"></i></p>
+                <h3>11+</h3>
+                <p>Partners</p>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-check" style="font-size: 50px"></i></p>
+                <h3>55+</h3>
+                <p>Projects</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-smile-o" style="font-size: 50px"></i></p>
+                <h3>100+</h3>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <p><i class="fa fa-coffee" style="font-size: 50px"></i></p>
+                <h3>100+</h3>
+                <p>Meetings</p>
+              </div>
+            </div>
+          </div>
+
+          <style>
+              
+              .column {
+                float: left;
+                width: 25%;
+                padding: 0 5px;
+              }
+              .row {margin-right: 10px;margin-left: 25px;}
+              .row:after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+              @media screen and (max-width: 600px) {
+                .column {
+                  width: 100%;
+                  display: block;
+                  margin-bottom: 10px;
+                }
+              }
+              .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                padding: 16px;
+                text-align: center;
+                background-color: #444;
+                color: white;
+              }
+              .card:hover
+              {
+                box-shadow: 20px 20px 20px 20px rgba(14, 3, 3, 0.897);
+              }
+              </style>
+
+    </div>
+    <div class="item11" style="color: lightgray">
+            <h4><font size="+2"><b><u>Products</u></b></font></h4><br>
+            Certificates<br>
+             Catalog<br>
+             Master Track<br>
+             Degrees<br>
+    </div>
+    <div class="item12"style="color: lightgray">
+            <h4><font size="+2"><b><u>Community</b></u></font></h4><br>
+            Learners<br>
+            Developers<br>
+            Beta Testers<br>
+            Translators<br>
+    </div>
+    <div class="item13"style="color: lightgray">
+            <h4><font size="+2"><b><u>Corsetty</u></b></font></h4><br>
+            About<br>
+            Careers<br>
+            Partners<br>
+            Help <br>
+    </div>
+    <div class="item14" style="color:silver;padding: 5px">
+
+      copyrights &copy; 2019 | Corsetty all rights recieved 2019.
+
+    </div>
+</body>
+</html>

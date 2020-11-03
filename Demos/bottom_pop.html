@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<button id="myBtn">Click me</button>
+<div id="popup" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>About me</h2>
+    </div>
+    <div class="modal-body">
+      <p>A 17 years old front-ender<br>
+      Learning to become <br>a full-stack developer</p>
+    </div>
+    <div class="modal-footer">
+      <h3>View Profile</h3>
+    </div>
+  </div>
+
+</div>
+
+<script>
+var modal = document.getElementById('popup');
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
